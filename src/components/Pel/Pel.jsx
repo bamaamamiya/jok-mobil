@@ -153,6 +153,7 @@ const Pel = () => {
             </li>
             <li>✅ Anti Air, Debu, & Bau</li>
             <li>⏳ Pemasangan Gampang, Cuma 5 Menit!</li>
+            <li>🌈 Request Warna & Request Jenis Mobil</li>
           </ul>
           <br />
         </div>
