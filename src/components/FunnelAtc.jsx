@@ -26,31 +26,32 @@ const FunnelAtc = () => {
     }
   };
 
-  const handleSubmit = () => {
-    if (!name || !whatsapp) {
-      alert("Silakan isi semua data!");
-      return;
-    }
-
-    // Nomor WhatsApp customer service
-    const customerServiceNumber = "6289522539016"; // Ganti dengan nomor CS Anda
-
-    // Temukan bundle yang dipilih berdasarkan `bundle` yang ada di state
-    const selectedBundle = bundles.find(
-      (bundleOption) => bundleOption.title === bundle);
-
-    // Pesan WhatsApp yang ingin dikirim
-    // const message = `Halo, saya ${name}. Saya tertarik memesan ${selectedBundle.title} ${selectedBundle.description} dengan metode pembayaran ${paymentMethod}`;
-    const message = `Halo, saya ${name}. Saya tertarik memesan ${selectedBundle.title} ${selectedBundle.description} dengan metode pembayaran ${paymentMethod}`;
-
-
-    // Redirect ke WhatsApp
-    const whatsappURL = `https://wa.me/${customerServiceNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappURL, "_blank");
-  };
-
+	const handleSubmit = () => {
+		if (!name || !whatsapp) {
+			alert("Silakan isi semua data!");
+			return;
+		}
+	
+		// Tambahkan tracking di sini
+		if (window.fbq) {
+			fbq("track", "AddToCart", {
+				content_name: bundle,
+				content_category: "Product Bundle",
+				value: selectedBundle.isPrice,
+				currency: "IDR",
+			});
+		}
+		
+		const customerServiceNumber = "6289522539016";
+		const selectedBundle = bundles.find(
+			(bundleOption) => bundleOption.title === bundle
+		);
+		const message = `Halo, saya ${name}. Saya tertarik memesan ${selectedBundle.title} ${selectedBundle.description} dengan metode pembayaran ${paymentMethod}`;
+	
+		const whatsappURL = `https://wa.me/${customerServiceNumber}?text=${encodeURIComponent(message)}`;
+		window.open(whatsappURL, "_blank");
+	};
+	
   const bundles = [
     {
       title: "Cover Sarung Jok",
