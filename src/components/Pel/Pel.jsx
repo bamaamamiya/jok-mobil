@@ -32,9 +32,7 @@ const Pel = () => {
           <br />
 
           <div className="text-3xl">
-            <p>
-              INILAH SARUNG JOK PICKUP & TRUK YANG AWET HINGGA 3 TAHUN
-            </p>
+            <p>INILAH SARUNG JOK PICKUP & TRUK YANG AWET HINGGA 3 TAHUN</p>
           </div>
           <br />
           <br />
@@ -102,12 +100,7 @@ const Pel = () => {
           <p className=" text-center font-bold text-2xl m-2">
             KALAU IYA, ANDA TIDAK PERLU KHAWATIR LAGI!
           </p>
-          <img
-            src="images/2.webp"
-            alt="jok"
-            width="640"
-            height="360"
-          />
+          <img src="images/2.webp" alt="jok" width="640" height="360" />
           <br />
           {/* <p>
             Karena dengan "Pel Anti Pegal", Anda tidak perlu lagi capek & pegal
@@ -167,6 +160,18 @@ const Pel = () => {
         <br />
         <br />
 
+        <div className="grid justify-center items-center m-2">
+          <br />
+          <img src="images/1.webp" alt="promo" width="640" height="360" />
+          <br />
+          <img src="images/2.webp" alt="promo" width="640" height="360" />
+          <br />
+          <img src="images/3.webp" alt="promo" width="640" height="360" />
+        </div>
+
+          <br />
+          <br />
+          <br />
         <div>
           <div className="grid justify-center items-center m-2">
             <h1 className="font-bold text-center text-4xl">TESTIMONI</h1>
@@ -189,20 +194,16 @@ const Pel = () => {
               width="640"
               height="360"
             />
-							<br />
+            <br />
             <img
               src="images/diskonspesial.webp"
               alt="promo"
               width="640"
               height="360"
             />
-            <img
-              src="images/offer.webp"
-              alt="promo"
-              width="640"
-              height="360"
-            />
+            <img src="images/offer.webp" alt="promo" width="640" height="360" />
           </div>
+          <br />
           <div className="p-4 bg-yellto text-center">
             <p className="font-bold">Promo Akan Berakhir Dalam : </p>
             <CountdownTimer hours={1} minutes={0} seconds={0} />

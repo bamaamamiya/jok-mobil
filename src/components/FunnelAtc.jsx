@@ -20,7 +20,7 @@ const FunnelAtc = () => {
       fbq("track", "AddToCart", {
         content_name: bundleTitle,
         content_category: "Product Bundle",
-        value: 157000, // Example: You can adjust the value based on your bundle price
+        value: 390000, // Example: You can adjust the value based on your bundle price
         currency: "IDR",
       });
     }
@@ -56,8 +56,8 @@ const FunnelAtc = () => {
       title: "Cover Sarung Jok",
       description: "Bonus 1 Sarung Stir",
       isRecommended: false,
-      price: 479000,
-      isPrice: 279000,
+      price: 790000,
+      isPrice: 390000,
     },
     
   ];
